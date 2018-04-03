@@ -3,23 +3,25 @@
 <head>
     <meta charset="utf-8">
     
-    <title>VueJS binding to Attribute, v-once, v-html | RyanJang, development story</title>
+    <title>Live Streaming Service | RyanJang, development story</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="" />
     
-    <meta name="description" content="이번 시간에는 속성 binding과 v-once, v-html에 대해 알아보겠습니다. 1234567891011121314151617181920212223242526272829303132333435363738394041&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;ko&quot;&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta charset=&quot;utf-8&quot;">
+    <meta name="description" content="사용하게 된 배경양재동 코드랩(codelabs.kr)은 코딩교육과 관련된 온라인, 오프라인 강의 서비스를 제공하고 있습니다.이와 관련하여 저희는 오프라인 강의를 Live로 회원분들께 제공할 수 있는 기능을 추가하였고, 기능 개발에 대한 전체적인 과정을 공유드리고자 합니다. 목차 nginx &amp;amp; rtmp server 구축하기 Web Front에 동영상">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VueJS binding to Attribute, v-once, v-html">
-<meta property="og:url" content="https://hiship56.github.io/2018/03/24/VueJS-binding-to-Attribute-v-once-v-html/index.html">
+<meta property="og:title" content="Live Streaming Service">
+<meta property="og:url" content="https://hiship56.github.io/2018/03/30/Live-Streaming-Service/index.html">
 <meta property="og:site_name" content="RyanJang, development story">
-<meta property="og:description" content="이번 시간에는 속성 binding과 v-once, v-html에 대해 알아보겠습니다. 1234567891011121314151617181920212223242526272829303132333435363738394041&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;ko&quot;&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta charset=&quot;utf-8&quot;">
+<meta property="og:description" content="사용하게 된 배경양재동 코드랩(codelabs.kr)은 코딩교육과 관련된 온라인, 오프라인 강의 서비스를 제공하고 있습니다.이와 관련하여 저희는 오프라인 강의를 Live로 회원분들께 제공할 수 있는 기능을 추가하였고, 기능 개발에 대한 전체적인 과정을 공유드리고자 합니다. 목차 nginx &amp;amp; rtmp server 구축하기 Web Front에 동영상">
 <meta property="og:locale" content="ko">
-<meta property="og:updated_time" content="2018-03-24T07:53:40.923Z">
+<meta property="og:image" content="https://hiship56.github.io/images/obs1.png">
+<meta property="og:updated_time" content="2018-04-03T02:13:58.869Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VueJS binding to Attribute, v-once, v-html">
-<meta name="twitter:description" content="이번 시간에는 속성 binding과 v-once, v-html에 대해 알아보겠습니다. 1234567891011121314151617181920212223242526272829303132333435363738394041&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;ko&quot;&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta charset=&quot;utf-8&quot;">
+<meta name="twitter:title" content="Live Streaming Service">
+<meta name="twitter:description" content="사용하게 된 배경양재동 코드랩(codelabs.kr)은 코딩교육과 관련된 온라인, 오프라인 강의 서비스를 제공하고 있습니다.이와 관련하여 저희는 오프라인 강의를 Live로 회원분들께 제공할 수 있는 기능을 추가하였고, 기능 개발에 대한 전체적인 과정을 공유드리고자 합니다. 목차 nginx &amp;amp; rtmp server 구축하기 Web Front에 동영상">
+<meta name="twitter:image" content="https://hiship56.github.io/images/obs1.png">
     
 
     
@@ -132,18 +134,18 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/vue/">vue</a>
+    미지정
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-VueJS-binding-to-Attribute-v-once-v-html" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-Live-Streaming-Service" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        VueJS binding to Attribute, v-once, v-html
+        Live Streaming Service
         </h1>
     
 
@@ -153,8 +155,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2018/03/24/VueJS-binding-to-Attribute-v-once-v-html/" class="article-date">
-            <time datetime="2018-03-24T07:21:26.000Z" itemprop="datePublished">2018-03-24</time>
+        <a href="/2018/03/30/Live-Streaming-Service/" class="article-date">
+            <time datetime="2018-03-30T02:03:20.000Z" itemprop="datePublished">2018-03-30</time>
         </a>
     </div>
 
@@ -163,17 +165,73 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>이번 시간에는 속성 binding과 v-once, v-html에 대해 알아보겠습니다.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"ko"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/vue@2.0.5/dist/vue.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">v-bind:href</span>=<span class="string">'url'</span>&gt;</span>www.naver.com<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-once</span>&gt;</span></span><br><span class="line">        &#123;&#123;notReRender&#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        &#123;&#123;changeHello()&#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-html</span>=<span class="string">'html'</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">'#app'</span>,</span></span><br><span class="line"><span class="undefined">        data: &#123;</span></span><br><span class="line"><span class="javascript">            url: <span class="string">'www.naver.com'</span>,</span></span><br><span class="line"><span class="javascript">            notReRender: <span class="string">'hello'</span>,</span></span><br><span class="line"><span class="xml">            html: '<span class="tag">&lt;<span class="name">button</span>&gt;</span>Click!<span class="tag">&lt;/<span class="name">button</span>&gt;</span>'</span></span><br><span class="line"><span class="undefined">        &#125;,</span></span><br><span class="line"><span class="undefined">        methods: &#123;</span></span><br><span class="line"><span class="javascript">            changeHello: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">this</span>.notReRender = <span class="string">'helloWorld'</span></span></span><br><span class="line"><span class="javascript">                <span class="keyword">return</span> <span class="keyword">this</span>.notReRender</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    &#125;)</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>v-bind를 통해 속성에서 인스턴스의 data를 받아와 a태그가 naver로 연결될 수 있도록 하였습니다.</li>
-<li>v-once를 통해 data를 binding하면 changeHello라는 함수가 실행되어도 변경되지 않습니다.</li>
-<li>v-html을 통해 html 코드를 직접 p태그에 넣었습니다.</li>
-</ul>
-<p> 기본적인 코드라 이해하시는데 큰 어려움은 없을 것 같습니다.</p>
+            <h2 id="사용하게-된-배경"><a href="#사용하게-된-배경" class="headerlink" title="사용하게 된 배경"></a>사용하게 된 배경</h2><p>양재동 코드랩(codelabs.kr)은 코딩교육과 관련된 온라인, 오프라인 강의 서비스를 제공하고 있습니다.<br>이와 관련하여 저희는 오프라인 강의를 Live로 회원분들께 제공할 수 있는 기능을 추가하였고, 기능 개발에 대한 전체적인 과정을 공유드리고자 합니다.</p>
+<h2 id="목차"><a href="#목차" class="headerlink" title="목차"></a>목차</h2><ol>
+<li>nginx &amp; rtmp server 구축하기</li>
+<li>Web Front에 동영상 삽입하기</li>
+<li>obs player 설치 및 조작법</li>
+<li>Test</li>
+</ol>
+<hr>
 <blockquote>
-<p>다음 링크를 통해 예제 코드를 확인해보세요.<br> <a href="https://jsfiddle.net/ryanjang/9ruescco/" target="_blank" rel="noopener">https://jsfiddle.net/ryanjang/9ruescco/</a></p>
+<p>1) nginx &amp; rtmp server 구축하기</p>
 </blockquote>
+<ul>
+<li><p>nginx 웹 서버에도 동영상을 streaming 할 수 있는 외부 모듈(rtmp)이 있습니다. 하기와 같이 각자의 환경에 맞게 nginx와 rtmp 서버를 구축해봅시다.</p>
+</li>
+<li><p>mac os local 환경에서 setting 하는 방법</p>
+</li>
+</ul>
+<p><em>Command(nginx와 rtmp 서버 설치)</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">brew tap denji/nginx</span><br><span class="line">brew options nginx-full</span><br><span class="line">brew info nginx-full</span><br><span class="line">brew install nginx-full --with-rtmp-module --with-debug</span><br></pre></td></tr></table></figure></p>
+<p><em>Config(usr/local/etc/nginx/nginx.conf의 하단에 추가)</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">rtmp &#123;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 1935;</span><br><span class="line">        chunk_size 4096;</span><br><span class="line"></span><br><span class="line">        application live &#123;</span><br><span class="line">            live on;</span><br><span class="line">            #record all;</span><br><span class="line">            #record_path /tmp;</span><br><span class="line">            #record_suffix _%d%m%Y_%H%M%S.flv;</span><br><span class="line">            #record_max_size 100000K;</span><br><span class="line">            #record_interval 30m;</span><br><span class="line">            #record_max_frames 4;</span><br><span class="line">            #record_unique on;</span><br><span class="line">            #record_append on;</span><br><span class="line">            #record_interval 5s;</span><br><span class="line">            #record_notify on;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><em>nginx server control</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nginx</span><br><span class="line">nginx -s stop</span><br><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>AWS EC2 ubuntu 환경에서 setting하는 방법</li>
+</ul>
+<p><em>Command(nginx와 rtmp 서버 설치)</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install build-essential libpcre3 libpcre3-dev libssl-dev</span><br><span class="line">mkdir ~/working</span><br><span class="line">cd ~/working</span><br><span class="line">wget http://nginx.org/download/nginx-1.7.5.tar.gz</span><br><span class="line">wget https://github.com/arut/nginx-rtmp-module/archive/master.zip</span><br><span class="line">sudo apt-get install unzip</span><br><span class="line">tar -zxvf nginx-1.7.5.tar.gz</span><br><span class="line">unzip master.zip</span><br><span class="line">cd nginx-1.7.5</span><br><span class="line">./configure --with-http_ssl_module --add-module=../nginx-rtmp-module-master</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br><span class="line">sudo wget https://raw.github.com/JasonGiedymin/nginx-init-ubuntu/master/nginx -O /etc/init.d/nginx</span><br><span class="line">sudo chmod +x /etc/init.d/nginx</span><br><span class="line">sudo update-rc.d nginx defaults</span><br></pre></td></tr></table></figure></p>
+<p><em>Config(usr/local/nginx/conf/nginx.conf의 하단에 추가)</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">rtmp &#123;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 1935;</span><br><span class="line">        chunk_size 4096;</span><br><span class="line"></span><br><span class="line">        application live &#123;</span><br><span class="line">            live on;</span><br><span class="line">            #record all;</span><br><span class="line">            #record_path /tmp;</span><br><span class="line">            #record_suffix _%d%m%Y_%H%M%S.flv;</span><br><span class="line">            #record_max_size 100000K;</span><br><span class="line">            #record_interval 30m;</span><br><span class="line">            #record_max_frames 4;</span><br><span class="line">            #record_unique on;</span><br><span class="line">            #record_append on;</span><br><span class="line">            #record_interval 5s;</span><br><span class="line">            #record_notify on;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><em>nginx server control</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo service nginx start</span><br><span class="line">sudo service nginx stop</span><br><span class="line">sudo service nginx reload</span><br></pre></td></tr></table></figure></p>
+<p><em>video record</em></p>
+<ul>
+<li>동영상을 녹화하기 위해서는 2가지 방법이 있습니다.<br>1) 동영상 플레이어(obs player 등)에서 녹화하기 버튼을 눌러 녹화(설정-출력-녹화 경로 setting)한다.<br>2) nginx.conf에서 record 설정을 하여 특정 경로에 저장한다.</li>
+</ul>
+<hr>
+<blockquote>
+<p>2) Web Front에 동영상 삽입하기</p>
+</blockquote>
+<ul>
+<li><p>nginx 서버에서 보내주는 동영상을 제공하기 위해 Adobe Flash Professional의  embed 태그를 사용하였습니다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">embed</span> <span class="attr">src</span>=<span class="string">"/static/js/vgaplayer.swf"</span> <span class="attr">width</span>=<span class="string">"100%"</span> <span class="attr">height</span>=<span class="string">"100%"</span></span></span><br><span class="line"><span class="tag"><span class="attr">allowScriptAccess</span>=<span class="string">"sameDomain"</span></span></span><br><span class="line"><span class="tag"><span class="attr">allowFullScreen</span>=<span class="string">"true"</span></span></span><br><span class="line"><span class="tag"><span class="attr">type</span>=<span class="string">"application/x-shockwave-flash"</span></span></span><br><span class="line"><span class="tag"><span class="attr">FlashVars</span>=<span class="string">"url=rtmp://http://localhost:1935/live/test&amp;fullscreen=1"</span></span></span><br><span class="line"><span class="tag"><span class="attr">pluginspage</span>=<span class="string">"http://www.adobe.com/go/getflashplayer"</span></span></span><br><span class="line"><span class="tag"><span class="attr">bgcolor</span>=<span class="string">"#ffffff"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>vgaplayer.swf file 및 FlashVars 옵션<br>(참조: <a href="https://github.com/euske/vgaplayer" target="_blank" rel="noopener">https://github.com/euske/vgaplayer</a>)</p>
+</li>
+<li><p>Embed 태그 옵션<br>(참조: <a href="https://helpx.adobe.com/kr/flash/kb/flash-object-embed-tag-attributes.html" target="_blank" rel="noopener">https://helpx.adobe.com/kr/flash/kb/flash-object-embed-tag-attributes.html</a>)</p>
+</li>
+</ul>
+<hr>
+<blockquote>
+<p>3) obs player 설치 및 조작법</p>
+</blockquote>
+<ul>
+<li><p>역할<br>display 및 cam으로 동영상을 녹화하고 streaming이 가능한 특정 프로토콜(RTMP)로 송출하는 역할을 합니다.</p>
+</li>
+<li><p>설치<br>홈페이지(<a href="https://obsproject.com/ko" target="_blank" rel="noopener">https://obsproject.com/ko</a>) 에서 사용환경에 맞게 다운로드 후 설치해주세요.</p>
+</li>
+<li><p>조작법<br>  1) 장면 및 소스 목록: 사진1의 좌측 하단에 장면을 추가하고 소스목록에서 live로 보여주고 싶은 소스(디스플레이 캡쳐, 비디오 캡쳐 등)를 선택하여 설정할 수 있습니다.<br>  2) 설정: 사진1의 우측 하단 설정버튼을 누르면  설정 창이 뜨고 왼쪽의 방송을 클릭하면 사진2와 같이 Live streaming을 위한 설정을 할 수 있습니다. 양재동 코드랩 페이지에 실시간 동영상을 제공하기 위해 방송형식은 사용자 임의 방송 서버를 선택하였으며 URL은 local의 rtmp주소(rtmp://localhost:1935)와 nginx.conf에서 설정한 application name(/live)을 설정하였고, 스트림 키는 임의로 test를 설정하였습니다.<br>  3) 방송 및 녹화: 사진1의 우측 하단에 방송시작과 녹화시작 버튼으로 조작할 수 있습니다.</p>
+</li>
+</ul>
+<p>사진 1) <img src="/images/obs1.png" alt=""></p>
+<p>사진 2) <img src="/images/setting2.png" alt=""></p>
+<hr>
+<blockquote>
+<p>4) Test</p>
+</blockquote>
+<ul>
+<li>nginx 서버 실행</li>
+<li>obs player 방송시작 버튼 클릭</li>
+<li>해당 페이지에서 live streaming 동작 화면 확인</li>
+</ul>
+<p><img src="/images/play1.png" alt=""></p>
 
         </div>
         <footer class="article-footer">
@@ -311,20 +369,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2018/03/30/Live-Streaming-Service/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2018/03/31/v-on으로-Event-실행하기/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">새로운</strong>
         <p class="article-nav-title">
         
-            Live Streaming Service
+            v-on으로 Event 실행하기
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2018/03/17/VueJS-data-변경하기/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2018/03/24/VueJS-binding-to-Attribute-v-once-v-html/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">오래된</strong>
-        <p class="article-nav-title">VueJS data 변경하기</p>
+        <p class="article-nav-title">VueJS binding to Attribute, v-once, v-html</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -458,7 +516,7 @@
     var disqus_shortname = 'hiship56';
     
     
-    var disqus_url = 'https://hiship56.github.io/2018/03/24/VueJS-binding-to-Attribute-v-once-v-html/';
+    var disqus_url = 'https://hiship56.github.io/2018/03/30/Live-Streaming-Service/';
     
     (function() {
     var dsq = document.createElement('script');
